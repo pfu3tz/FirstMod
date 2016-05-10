@@ -1,6 +1,7 @@
 package com.pfuetz.firstmod;
 
 import com.pfuetz.firstmod.handler.ConfigurationHandler;
+import com.pfuetz.firstmod.init.ModItems;
 import com.pfuetz.firstmod.proxy.IProxy;
 import com.pfuetz.firstmod.reference.Reference;
 import com.pfuetz.firstmod.utility.LogHelper;
@@ -23,6 +24,8 @@ public class FirstMod {
     public void preInit(FMLPreInitializationEvent event){
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+
+        ModItems.init();
         LogHelper.info("Pre Initialization Complete!");
     }
 
