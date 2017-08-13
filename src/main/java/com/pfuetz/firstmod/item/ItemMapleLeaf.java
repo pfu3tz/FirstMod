@@ -8,5 +8,6 @@ public class ItemMapleLeaf extends ItemFM {
     {
         super();
         this.setUnlocalizedName("mapleLeaf");
+        //this.maxStackSize = 1;
     }
 }
